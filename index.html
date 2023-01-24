@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Encriptador y Desencriptador</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Encriptador y Desencriptador de Vocales</h1>
+    <form action="">
+        <label for="inputEncriptar">Ingrese texto para encriptar:</label>
+        <br>
+        <input type="text" id="inputEncriptar" />
+        <br>
+        <input type="button" value="Encriptar" onclick="encriptar()" />
+        <input type="button" value="Copiar" onclick="copyTextDesencriptado()" />
+        <br>
+        <label for="outputEncriptar">Texto encriptado:</label>
+        <br>
+        <input type="text" id="outputEncriptar" />
+        <br>
+        <input type="button" value="Copiar" onclick="copyTextEncriptado()" />
+        <br><br>
+        <label for="inputDesencriptar">Ingrese texto para desencriptar:</label>
+        <br>
+        <input type="text" id="inputDesencriptar" />
+        <br>
+        <input type="button" value="Desencriptar" onclick="desencriptar()" />
+        <input type="button" value="Copiar" onclick="copyTextDesencriptado()" />
+        <br>
+        <label for="outputDesencriptar">Texto desencriptado:</label>
+        <br>
+        <input type="text" id="outputDesencriptar" />
+        <br>
+        <input type="button" value="Copiar" onclick="copyTextDesencriptado()" />
+        <br>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
