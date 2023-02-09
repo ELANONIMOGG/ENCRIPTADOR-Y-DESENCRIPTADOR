@@ -65,23 +65,3 @@ function copyTextDesencriptado() {
     textoDesencriptado.select();
     document.execCommand('copy');
 }
-
-function validateInput(input) {
-  const regex = /^[a-z]+$/; // Solo permite minúsculas
-  return regex.test(input);
-}
-
-const form = document.querySelector("form");
-
-form.addEventListener("submit", event => {
-  event.preventDefault();
-
-  const input = document.querySelector("input").value;
-
-  if (!validateInput(input)) {
-    alert("Solo se permiten minúsculas y sin acentos");
-  } else {
-    // Enviar formulario o hacer cualquier otra cosa
-  }
-})
-
