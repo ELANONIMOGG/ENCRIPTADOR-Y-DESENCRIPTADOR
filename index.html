@@ -1,44 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alura Encriptador</title>
 
-<head>
-    <title>Encriptador y Desencriptador</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
 
-<body>
-    <div class="fondo-gif"></div>
-    <h1>Encriptador y Desencriptador de Vocales</h1>
-    <form action="">
-        <label for="inputEncriptar">Ingrese texto para encriptar:</label>
-        <br>
-        <input type="text" id="inputEncriptar" />
-        <br>
-        <input type="button" value="Encriptar" onclick="encriptar()" />
-        <input type="button" value="Copiar" onclick="copyTextDesencriptado()" />
-        <br>
-        <label for="outputEncriptar">Texto encriptado:</label>
-        <br>
-        <input type="text" id="outputEncriptar" />
-        <br>
-        <input type="button" value="Copiar" onclick="copyTextEncriptado()" />
-        <br><br>
-        <label for="inputDesencriptar">Ingrese texto para desencriptar:</label>
-        <br>
-        <input type="text" id="inputDesencriptar" />
-        <br>
-        <input type="button" value="Desencriptar" onclick="desencriptar()" />
-        <input type="button" value="Copiar" onclick="copyTextDesencriptado()" />
-        <br>
-        <label for="outputDesencriptar">Texto desencriptado:</label>
-        <br>
-        <input type="text" id="outputDesencriptar" />
-        <br>
-        <input type="button" value="Copiar" onclick="copyTextDesencriptado()" />
-        <br>
-    </form>
-    <script src="script.js"></script>
-    
+        <!-- Mis estilos -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
 
-</body>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <img src="./assets/img/logo.png" alt="" />
+        </header>
 
+        <!-- Cuerpo -->
+        <main>
+            <!-- Seccion 1 -->
+            <section class="contenedores grid-item-1">
+                <!-- Texto de Entrada -->
+                <textarea
+                    name="textoEntrada"
+                    id="textoEntrada"
+                    placeholder="Escribe tu texto aquí"
+                ></textarea>
+
+                <div class="advertencia">
+                    <img src="./assets/img/exclamation.png" />
+                    Solo letras minúsculas y sin acentos
+                </div>
+
+                <!-- Contenedor de botones -->
+                <div class="cajaBotones">
+                    <!-- Encriptar -->
+                    <button id="btnEncriptar" class="botones">Encriptar</button>
+                    <!-- Desencriptar -->
+                    <button id="btnDesencriptar" class="botones">Desencriptar</button>
+                </div>
+            </section>
+
+            <!-- Seccion 2 -->
+            <section class="contenedores grid-item-2">
+                <img src="./assets/img/muneco.png" width="200" alt="" id="muneco" />
+
+                <h1 id="titulo">Ningún mensaje fue encontrado</h1>
+
+                <p id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+
+                <textarea
+                    name="textoSalida"
+                    id="textoSalida"
+                    placeholder="Texto encriptado"
+                    class="hide"
+                    disabled
+                ></textarea>
+
+                <button id="btnCopiar" class="botones hide">Copiar</button>
+            </section>
+        </main>
+
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>
